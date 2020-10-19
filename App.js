@@ -1,19 +1,18 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import {Button, Input, PricingCard} from 'react-native-elements';
+
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+
+import LoginNavigation from './navigation/login/LoginNavigation';
+import TabNavigation from './navigation/TabNavigation';
 
 export default function App() {
-  const [outputText, setOutputText] = useState(
-    'Starter text. Click the button to change it',
-  );
-
   return (
-    <View style={styles.container}>
-      <Text style={{color: 'blue', marginBottom: 20}}>{outputText}</Text>
-      <Button
-        title="Change text"
-        onPress={() => setOutputText('Text is changed, yeah')}
-      />
-    </View>
+    <NavigationContainer>
+      <LoginNavigation />
+    </NavigationContainer>
   );
 }
 
