@@ -8,11 +8,26 @@ import {NavigationContainer} from '@react-navigation/native';
 import LoginNavigation from './navigation/login/LoginNavigation';
 import TabNavigation from './navigation/TabNavigation';
 
+// Reducers setup
+import servicesReducer from './store/reducers/services';
+
+//Redux stuff
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
+
+const rootReducer = combineReducers({
+  servicesState: servicesReducer,
+});
+
+const store = createStore(rootReducer);
+
 export default function App() {
   return (
-    <NavigationContainer>
-      <LoginNavigation />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <TabNavigation />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
