@@ -24,7 +24,12 @@ function SubjectListScreen(props) {
               <ServiceCardItem
                 title={itemData.item.name}
                 info={itemData.item.info}
-                onViewDetail={() => {}}
+                onViewDetails={() => {
+                  props.navigation.navigate('SubjectDetails', {
+                    serviceId: itemData.item.id,
+                    serviceTitle: itemData.item.name,
+                  });
+                }}
               />
             );
           }}

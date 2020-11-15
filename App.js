@@ -7,6 +7,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import LoginNavigation from './navigation/login/LoginNavigation';
 import TabNavigation from './navigation/TabNavigation';
+import HomeNavigation from './navigation/HomeNavigation';
 
 // Reducers setup
 import servicesReducer from './store/reducers/services';
@@ -25,7 +26,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <TabNavigation />
+        <HomeNavigation />
       </NavigationContainer>
     </Provider>
   );

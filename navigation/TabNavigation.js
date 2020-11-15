@@ -8,6 +8,7 @@ import ApplicationsScreen from '../screens/main/ApplicationsScreen';
 
 const Tab = createBottomTabNavigator();
 
+// Tab Navigation is basically Home component
 export default function TabNavigation() {
   return (
     <Tab.Navigator
