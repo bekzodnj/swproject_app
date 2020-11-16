@@ -6,7 +6,6 @@ import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 
 import LoginNavigation from './navigation/login/LoginNavigation';
-import TabNavigation from './navigation/TabNavigation';
 import HomeNavigation from './navigation/HomeNavigation';
 
 // Reducers setup
@@ -26,7 +25,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <HomeNavigation />
+        <LoginNavigation />
       </NavigationContainer>
     </Provider>
   );

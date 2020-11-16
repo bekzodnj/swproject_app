@@ -1,23 +1,40 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {Button, Input, Text, ThemeProvider} from 'react-native-elements';
-
-import {Calendar} from 'react-native-big-calendar';
+import {Button as Btn, Text as Txt, Icon} from 'native-base';
+// import {Calendar} from 'react-native-big-calendar';
 
 function DashboardScreen({navigation}) {
   return (
     <ThemeProvider>
       <ScrollView style={{flex: 1, padding: 30}}>
+        <TouchableOpacity onPress={() => {}}>
+          <Image
+            source={require('./img/profile.png')}
+            style={{width: 72, height: 72, alignSelf: 'flex-end'}}
+          />
+        </TouchableOpacity>
+
         <View>
           <Text h1 style={{marginVertical: 30}}>
             Your dashboard
           </Text>
+
           <View style={styles.card}>
             <Text style={styles.cardText}>
-              Upcoming class: Introduction to Calculus
+              You have not registered any classes yet.
             </Text>
-            <Text style={styles.card_2}>At 10:15am in 12 October</Text>
-            <Button title="Check the calendar >" style={{marginVertical: 20}} />
+            <Text style={styles.card_2}>
+              After registration upcoming class time appear here
+            </Text>
+
+            <Button title="Browse Courses >" style={{marginVertical: 20}} />
           </View>
         </View>
       </ScrollView>
@@ -39,7 +56,6 @@ const styles = StyleSheet.create({
   card_2: {
     fontSize: 24,
     lineHeight: 35,
-    fontWeight: 'bold',
     color: 'grey',
     marginBottom: 15,
   },

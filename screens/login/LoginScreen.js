@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, TextInput} from 'react-native';
 import {Button, Input, Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -11,7 +11,7 @@ function LoginScreen({navigation}) {
         Login into your account
       </Text>
       <Input placeholder="Email" />
-      <Input placeholder="Password" />
+      <Input placeholder="Password" secureTextEntry />
       <Button title="Login" onPress={() => navigation.navigate('Dashboard')} />
       <View
         style={{
