@@ -16,6 +16,7 @@ export default function DrawerNavigation() {
       <Drawer.Screen name="Home" component={TabNavigation} />
       <Drawer.Screen name="My Profile" component={MyProfile} />
       <Drawer.Screen name="My Applications" component={MyApplications} />
+      <Drawer.Screen name="Log out" component={MyApplications} />
     </Drawer.Navigator>
   );
 }

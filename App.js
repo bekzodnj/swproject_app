@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <LoginNavigation />
+        <HomeNavigation />
       </NavigationContainer>
     </Provider>
   );

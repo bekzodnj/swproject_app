@@ -13,9 +13,9 @@ function DashboardScreen({navigation}) {
 
   const events = [
     {
-      title: 'Example Class',
-      start: new Date(2020, 1, 11, 9),
-      end: new Date(2020, 1, 11, 11, 30),
+      title: 'Calculus Intro',
+      start: new Date(2020, 1, 11, 12),
+      end: new Date(2020, 1, 11, 14),
     },
   ];
 

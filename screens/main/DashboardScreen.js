@@ -27,14 +27,12 @@ function DashboardScreen({navigation}) {
           </Text>
 
           <View style={styles.card}>
-            <Text style={styles.cardText}>
-              You have not registered any classes yet.
-            </Text>
+            <Text style={styles.cardText}>Upcoming class:</Text>
             <Text style={styles.card_2}>
-              After registration upcoming class time appear here
+              Calculus Intro. At 12:00pm in 24th November
             </Text>
 
-            <Button title="Browse Courses >" style={{marginVertical: 20}} />
+            <Button title="Check calendar >" style={{marginVertical: 20}} />
           </View>
         </View>
       </ScrollView>
